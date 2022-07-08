@@ -4,26 +4,36 @@
 
 /**
  *
- *  * print_alphabet - print the alphabet in lowercase
+ *  * _isupper - Check for uppercase characters
  *
- *   * followed by a new line
+ *   * @c: integer
  *
- *    */
+ *    * Return: 1 (Success) 0 (Otherwise)
+ *
+ *     */
 
 
 
-void print_alphabet(void)
+int _isupper(int c)
 
 {
 
-		char alphabet;
+		int i;
 
 
 
-			for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+			for (i = 'A'; i <= 'Z'; i++)
 
-						_putchar(alphabet);
+					{
 
-				_putchar('\n');
+								if (c == i)
+
+												return (1);
+
+									}
+
+
+
+				return (0);
 
 }
