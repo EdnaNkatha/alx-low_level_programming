@@ -4,48 +4,34 @@
 
 /**
  *
- *  * _isalpha - check for aphabetic character
+ *  * print_most_numbers - print 0 - 9 excluding 2 and 4
  *
- *   *@c: input character
+ *   *
  *
- *    *
+ *    * Return: void
  *
- *     * Return: 1 (Success) 0 (Otherwise)
- *
- *      */
+ *     */
 
-
-
-int _isalpha(int c)
+void print_most_numbers(void)
 
 {
 
-		int alpha;
+		int i;
 
 
 
-			for (alpha = 'a'; alpha <= 'z'; alpha++)
+			for (i = 0; i < 10; i++)
 
 					{
 
-								if (c == alpha)
+								if (i == 2 || i == 4)
 
-												return (1);
+												continue;
 
-									}
+										_putchar(i + '0');
 
+											}
 
-
-				for (alpha = 'A'; alpha <= 'Z'; alpha++)
-
-						{
-
-									if (c == alpha)
-
-													return (1);
-
-										}
-
-					return (0);
+				_putchar('\n');
 
 }

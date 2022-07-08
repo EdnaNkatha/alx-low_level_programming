@@ -1,29 +1,45 @@
-nclude <stdio.h>
+#include "main.h"
 
 
 
 /**
  *
- *  * _abs - Compute absolute value of a number
+ *  * print_line - prints a line
  *
- *   *@k: integer
+ *   * @n: length
  *
  *    *
  *
- *     * Return: Always 0 (Success)
+ *     * Return: void
  *
  *      */
 
-int _abs(int k)
+void print_line(int n)
 
 {
 
-		if (k >= 0)
+		int i, x;
 
-					return (k);
 
-			k *= -1;
 
-				return (k);
+			if (n <= 0)
+
+					{
+
+								_putchar('\n');
+
+										return;
+
+											}
+
+				for (i = 0; i <= n; i++)
+
+						{
+
+									x = i == n ? '\n' : '_';
+
+											_putchar(x);
+
+												}
 
 }

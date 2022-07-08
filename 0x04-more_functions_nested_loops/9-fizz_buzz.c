@@ -1,73 +1,69 @@
-#include "main.h"
+#include <stdio.h>
 
 
 
 /**
  *
- *  * times_table - print the 9 x i table
+ *  * main - Entry point
  *
- *   */
+ *   *
+ *
+ *    * Return: Always 0 (Success)
+ *
+ *     */
 
-
-
-void times_table(void)
+int main(void)
 
 {
 
-		int left, right;
+		int i;
 
 
 
-			for (left = 0; left < 10; left++)
+			for (i = 1; i <= 100; i++)
 
 					{
 
-								for (right = 0; right < 10; right++)
+								if (i > 1)
 
-											{
+												printf(" ");
 
-															if ((left * right) < 10)
+										if (i % 3 == 0 && i % 5 == 0)
 
-																			{
+													{
 
-																								_putchar((left * right) + '0');
+																	printf("FizzBuzz");
 
-																												if (right == 9)
+																				continue;
 
-																																		continue;
+																						}
 
-																																_putchar(',');
+												if (i % 5 == 0)
 
-																																				_putchar(' ');
+															{
 
-																																								if (left * (right + 1) >= 10)
+																			printf("Buzz");
 
-																																														continue;
+																						continue;
 
-																																												_putchar(' ');
+																								}
 
-																																																continue;
+														if (i % 3 == 0)
 
-																																																			}
+																	{
 
-																		_putchar(((left * right) / 10) + '0');
+																					printf("Fizz");
 
-																					_putchar(((left * right) % 10) + '0');
+																								continue;
 
-																								if (right == 9)
+																										}
 
-																													continue;
+																printf("%d", i);
 
-																											_putchar(',');
+																	}
 
-																														_putchar(' ');
+				printf("\n");
 
-																																}
-
-										_putchar('\n');
-
-											}
-
-
+					return (0);
 
 }

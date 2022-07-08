@@ -4,34 +4,54 @@
 
 /**
  *
- *  * print_last_digit - evaluate the last digit of a number
+ *  * print_diagonal - prints a line
  *
- *   *@k: integer input
+ *   * @n: length
  *
  *    *
  *
- *     * Return: The last digit (Success)
+ *     * Return: void
  *
  *      */
 
-
-
-int print_last_digit(int k)
+void print_diagonal(int n)
 
 {
 
-		int last;
+		int i, j;
 
 
 
-			last = k % 10;
+			if (n <= 0)
 
-				if (last < 0)
+					{
 
-							last *= -1;
+								_putchar('\n');
 
-					_putchar(last + '0');
+										return;
 
-						return (last);
+											}
+
+				for (i = 0; i < n; i++)
+
+						{
+
+									_putchar('\\');
+
+											_putchar('\n');
+
+													if (i == n - 1)
+
+																	continue;
+
+															for (j = 0; j < i + 1; j++)
+
+																		{
+
+																						_putchar(' ');
+
+																								}
+
+																}
 
 }

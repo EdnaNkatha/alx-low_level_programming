@@ -4,40 +4,46 @@
 
 /**
  *
- *  * jack_bauer - print every minute and hour of the day
+ *  * print_square - print a square pattern
  *
- *   */
+ *   * @size: l
+ *
+ *    * Return: void
+ *
+ *     */
 
-void jack_bauer(void)
+void print_square(int size)
 
 {
 
-		int hour, min;
+		int i, j;
 
 
 
-			for (hour = 0; hour < 24; hour++)
+			if (size <= 0)
 
 					{
 
-								for (min = 0; min < 60; min++)
+								_putchar('\n');
 
-											{
+										return;
 
-															_putchar((hour / 10) + '0');
+											}
 
-																		_putchar((hour % 10) + '0');
+				for (i = 0; i < size; i++)
 
-																					_putchar(':');
+						{
 
-																								_putchar((min / 10) + '0');
+									for (j = 0; j < size; j++)
 
-																											_putchar((min % 10) + '0');
+												{
 
-																														_putchar('\n');
+																_putchar('#');
 
-																																}
+																		}
 
-									}
+											_putchar('\n');
+
+												}
 
 }

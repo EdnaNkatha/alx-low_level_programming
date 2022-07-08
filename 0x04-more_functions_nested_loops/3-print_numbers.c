@@ -4,36 +4,30 @@
 
 /**
  *
- *  * _islower - check for lower case character
+ *  * print_numbers - print 0 - 9
  *
- *   * @c: integer input
+ *   *
  *
- *    *
+ *    * Return: void
  *
- *     * Return: 0 (Lowercase) 1 (Otherwise)
- *
- *      */
+ *     */
 
-
-
-int _islower(int c)
+void print_numbers(void)
 
 {
 
-		int i;
+		int i, x;
 
 
 
-			for (i = 'a'; i <= 'z'; i++)
+			for (i = 0; i <= 10; i++)
 
 					{
 
-								if (c == i)
+								x = i < 10 ? (i + '0') : '\n';
 
-												return (1);
+										_putchar(x);
 
-									}
-
-				return (0);
+											}
 
 }

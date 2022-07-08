@@ -4,42 +4,40 @@
 
 /**
  *
- *  * print_sign - Print the sign of a number
+ *  * more_numbers - print 0 - 14
  *
- *   *@n: integer input
+ *   *
  *
- *    *
+ *    * Return: void
  *
- *     * Return: -1 (Negative) 0 (Zero) 1 (Positive)
- *
- *      */
+ *     */
 
-int print_sign(int n)
+void more_numbers(void)
 
 {
 
-		if (n < 0)
+		int i, j;
 
-				{
 
-							_putchar('-');
 
-									return (-1);
-
-										}
-
-			if (n > 0)
+			for (i = 0; i < 10; i++)
 
 					{
 
-								_putchar('+');
+								for (j = 0; j <= 14; j++)
 
-										return (1);
+											{
+
+															if (j / 10)
+
+																				_putchar((j / 10) + '0');
+
+																		_putchar((j % 10) + '0');
+
+																				}
+
+										_putchar('\n');
 
 											}
-
-				_putchar('0');
-
-					return (0);
 
 }

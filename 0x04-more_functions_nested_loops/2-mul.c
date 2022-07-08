@@ -4,20 +4,22 @@
 
 /**
  *
- *  * main - check the code
+ *  * mul - Entry point
  *
- *   *
+ *   * @a: interger
  *
- *    * Return: Always 0.
+ *    * @b: integer
  *
- *     */
+ *     *
+ *
+ *      * Return: a x b
+ *
+ *       */
 
-int main(void)
+int mul(int a, int b)
 
 {
 
-		print_alphabet_x10();
-
-			return (0);
+		return (a * b);
 
 }
