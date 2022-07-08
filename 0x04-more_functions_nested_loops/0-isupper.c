@@ -1,35 +1,39 @@
-#include <string.h>
-
 #include "main.h"
 
 
 
 /**
  *
- *  * main - Entry point
+ *  * _isupper - Check for uppercase characters
  *
- *   *
+ *   * @c: integer
  *
- *    * Return: Always 0 (Success)
+ *    * Return: 1 (Success) 0 (Otherwise)
  *
  *     */
 
-int main(void)
+
+
+int _isupper(int c)
 
 {
 
-		const char str[] = "_putchar\n";
-
-			int len = strlen(str);
-
-				int i;
+		int i;
 
 
 
-					for (i = 0; i < len; i++)
+			for (i = 'A'; i <= 'Z'; i++)
 
-								_putchar(str[i]);
+					{
 
-						return (0);
+								if (c == i)
+
+												return (1);
+
+									}
+
+
+
+				return (0);
 
 }
