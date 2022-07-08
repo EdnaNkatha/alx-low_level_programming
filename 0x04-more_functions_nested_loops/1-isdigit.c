@@ -1,44 +1,4 @@
-#ifndef _MAIN_H
-
-#define _MAIN_H
-
-
-
-
-
-/**
- *
- *  * _putchar - writes the character c to stdout
- *
- *   * @c: The character to print
- *
- *    *
- *
- *     * Return: On success 1.
- *
- *      * On error, -1 is returned, and error is set appropriately.
- *
- *       */
-
-
-
-int _putchar(char c);
-
-
-
-/**
- *
- *  * _isupper - Check for uppercase characters
- *
- *   *
- *
- *    * Return: 1 (Success) 0 (Otherwise)
- *
- *     */
-
-
-
-int _isupper(int c);
+#include "main.h"
 
 
 
@@ -54,8 +14,26 @@ int _isupper(int c);
 
 
 
-int _isdigit(int c);
+int _isdigit(int c)
+
+{
+
+		int i;
 
 
 
-#endif /* main.h */
+			for (i = '0'; i <= '9'; i++)
+
+					{
+
+								if (c == i)
+
+												return (1);
+
+									}
+
+
+
+				return (0);
+
+}
