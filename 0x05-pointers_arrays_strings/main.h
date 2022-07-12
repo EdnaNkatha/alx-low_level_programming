@@ -212,7 +212,7 @@ int _atoi(char *s);
 
 
 
-#endif#ifndef _MAIN_H
+#ifndef _MAIN_H
 
 #define _MAIN_H
 
