@@ -4,38 +4,40 @@
 
 /**
  *
- *  * reverse_array - reverse array
+ *  * _strcmp - compare two strings
  *
- *   * @a: array
+ *   * @s1: char pointer
  *
- *    * @n: number of elements
+ *    * @s2: char pointer
  *
  *     *
  *
- *      * Return: void
+ *      * Return: int
  *
  *       */
 
 
 
-void reverse_array(int *a, int n)
+int _strcmp(char *s1, char *s2)
 
 {
 
-		int i, j, temp;
+		int i = 0;
 
 
 
-			for (j = 0, i = n - 1; j < i; i--, j++)
+			while (*(s1 + i) == *(s2 + i) && *(s1 + i))
 
-					{
+						i++;
 
-								temp = *(a + j);
 
-										*(a + j) = *(a + i);
 
-												*(a + i) = temp;
+				if (*(s2 + i))
 
-													}
+							return (*(s1 + i) - *(s2 + i));
+
+
+
+					return (0);
 
 }

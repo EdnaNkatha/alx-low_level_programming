@@ -4,40 +4,42 @@
 
 /**
  *
- *  * _strcmp - compare two strings
+ *  * _strncpy - Entry point
  *
- *   * @s1: char pointer
+ *   * @dest: char pinter
  *
- *    * @s2: char pointer
+ *    * @src: char pointer
  *
- *     *
+ *     * @n: integer
  *
- *      * Return: int
+ *      *
  *
- *       */
+ *       * Return: char
+ *
+ *        */
 
 
 
-int _strcmp(char *s1, char *s2)
+char *_strncpy(char *dest, char *src, int n)
 
 {
 
-		int i = 0;
+		int i;
 
 
 
-			while (*(s1 + i) == *(s2 + i) && *(s1 + i))
+			for (i = 0; i < n && src[i] != '\0'; i++)
 
-						i++;
-
-
-
-				if (*(s2 + i))
-
-							return (*(s1 + i) - *(s2 + i));
+						dest[i] = src[i];
 
 
 
-					return (0);
+				for (; i < n; i++)
+
+							dest[i] = '\0';
+
+
+
+					return (dest);
 
 }
